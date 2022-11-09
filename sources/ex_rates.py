@@ -47,7 +47,7 @@ class ExchangeRates:
             config_key (str, optional): The key in the viadot config holding relevant credentials.
         """
 
-        self.credentials={}
+        self.credentials = {"apikey": "wsv9UWyKU8QBv1B8C5U2ej6Q9hnnv05I"}
         # if credentials is None:
         # raise CredentialError("Please specify the credentials.")
 
@@ -137,4 +137,3 @@ class ExchangeRates:
         df = pd.json_normalize(json["currencies"])
 
         return df
-
