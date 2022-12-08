@@ -1,4 +1,3 @@
-import psycopg2
 from sqlalchemy import create_engine
 from prefect import task, flow
 from sources import ExchangeRates

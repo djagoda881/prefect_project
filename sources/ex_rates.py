@@ -47,7 +47,7 @@ class ExchangeRates:
             config_key (str, optional): The key in the viadot config holding relevant credentials.
         """
 
-        self.credentials = {}
+        self.credentials = {"api_key": "4e4WajPWERtLA9fbxwXQPpJnrOO7SDoN"}
         # if credentials is None:
         # raise CredentialError("Please specify the credentials.")
 
