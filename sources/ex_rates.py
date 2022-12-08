@@ -3,6 +3,12 @@ import pandas as pd
 import requests
 from datetime import datetime
 from typing import Any, Dict, List, Literal
+from prefect.blocks.system import Secret
+
+secret_block = Secret.load("apikey")
+
+# Access the stored secret
+key = secret_block.get()
 
 Currency = Literal[
     "USD", "EUR", "GBP", "CHF", "PLN", "DKK", "COP", "CZK", "SEK", "NOK", "ISK"
@@ -47,7 +53,7 @@ class ExchangeRates:
             config_key (str, optional): The key in the viadot config holding relevant credentials.
         """
 
-        self.credentials = 
+        self.credentials = {"api_key": key}
         # if credentials is None:
         # raise CredentialError("Please specify the credentials.")
 

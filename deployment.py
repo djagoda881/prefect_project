@@ -7,7 +7,7 @@ github_block = GitHub.load("githubdj")
 
 deployment = Deployment.build_from_flow(
     flow=ex_rates_to_postgresql,
-    name="log-simple",
+    name="git-domino",
     work_queue_name="test",
     storage=github_block,
 )
