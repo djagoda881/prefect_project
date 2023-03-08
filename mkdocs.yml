@@ -1,4 +1,4 @@
 site_name: Viadot Docs
-site_url: "https://dyvenia.github.io/viadot/"
+edit_uri: blob/test2/docs/
 nav:
   - Home: index.md
