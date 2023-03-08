@@ -1,4 +1,3 @@
-site_name: Viadot Docs
-edit_uri: blob/test2/docs/
+site_name: teas
 nav:
   - Home: index.md
