@@ -1,3 +1,4 @@
 site_name: teas
+site_url: "https://djagoda881.github.io/prefect_project/"
 nav:
   - Home: index.md
