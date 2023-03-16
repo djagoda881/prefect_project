@@ -5,7 +5,7 @@ from sources import ExchangeRates
 
 @task
 def ConnectDB():
-    engine = create_engine("postgresql://domino:domino@localhost:5432/dbdj")
+    engine = create_engine("postgresql://user:password@localhost:5432/db")
     source = ExchangeRates()
     df = source.to_df()
     df.to_sql("t_exchange_rates", engine, if_exists="append", index=False)

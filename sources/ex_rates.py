@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 from datetime import datetime
 from typing import Any, Dict, List, Literal
+
 from prefect.blocks.system import Secret
 
 secret_block = Secret.load("apikey")

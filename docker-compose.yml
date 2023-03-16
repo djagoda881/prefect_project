@@ -3,9 +3,9 @@ services:
   postgres:
     image: postgres:latest
     environment:
-      POSTGRES_PASSWORD: domino
-      POSTGRES_DB: dbdj
-      POSTGRES_USER: domino
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db
+      POSTGRES_USER: user
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:
