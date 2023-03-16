@@ -1,15 +1,14 @@
 from ex_rates_task import ex_rates_to_postgresql
 from prefect.deployments import Deployment
-from prefect_github.repository import GitHubRepository
+from prefect.filesystems import GitHub
 
-github_repository_block = GitHubRepository.load("git-repo")
-
+github_block = GitHub.load("githubdj")
 
 deployment = Deployment.build_from_flow(
     flow=ex_rates_to_postgresql,
-    name="git-dominik",
+    name="git-dominik-4",
     work_queue_name="test",
-    storage=github_repository_block,
+    storage=github_block,
 )
 
 if __name__ == "__main__":
